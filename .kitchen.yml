@@ -1,0 +1,20 @@
+---
+driver:
+  name: vagrant
+  synced_folders: 
+  - ["~/shuttle","/opt/shuttle"]
+
+provisioner:
+  name: chef_zero
+
+platforms:
+- name: boxcutter-VAGRANTSLASH-ubuntu1404-desktop
+  driver_config:
+    box: boxcutter-VAGRANTSLASH-ubuntu1404-desktop
+    box_url: ~/Vagrant\ Boxes/boxcutter-VAGRANTSLASH-ubuntu1404-desktop
+
+suites:
+  - name: dfdevm_spark_eclipse
+    run_list:
+      - recipe[dfdevm_spark_eclipse::default]
+    attributes:
