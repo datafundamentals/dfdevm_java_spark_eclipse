@@ -1,13 +1,17 @@
 ---
 driver:
   name: vagrant
+<<<<<<< HEAD
   synced_folders: 
   - ["~/shuttle","/opt/shuttle"]
+=======
+>>>>>>> 12fab742960f199903e8a5d840db355314522dd9
 
 provisioner:
   name: chef_zero
 
 platforms:
+<<<<<<< HEAD
 - name: boxcutter-VAGRANTSLASH-ubuntu1404-desktop
   driver_config:
     box: boxcutter-VAGRANTSLASH-ubuntu1404-desktop
@@ -17,4 +21,13 @@ suites:
   - name: dfdevm_spark_eclipse
     run_list:
       - recipe[dfdevm_spark_eclipse::default]
+=======
+  - name: ubuntu-12.04
+  - name: centos-6.5
+
+suites:
+  - name: default
+    run_list:
+      - recipe[dfdevm_java_spark_eclipse::default]
+>>>>>>> 12fab742960f199903e8a5d840db355314522dd9
     attributes:

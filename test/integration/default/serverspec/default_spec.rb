@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'dfdevm_spark_eclipse::default' do
+describe 'dfdevm_java_spark_eclipse::default' do
 
   # Serverspec examples can be found at
   # http://serverspec.org/resource_types.html
